@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Football Score Table</title>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="football.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+</head>
+<body>
+<h1>Footbal Score Table</h1>
+<div id="teams">
+<h2>Game</h2>
+<select id="sel1">
+	<option>Team 1</option>
+	<option>Team 2</option>
+	<option>Team 3</option>
+	<option>Team 4</option>
+</select>
+<input id="first" type="number" value="0">
+<i class="fa fa-futbol-o" aria-hidden="true"></i>
+<input id="second" type="number" value="0">
+<select id="sel2">
+	<option>Team 1</option>
+	<option>Team 2</option>
+	<option>Team 3</option>
+	<option>Team 4</option>
+</select>
+<button>Add result</button>
+
+<ol id="list">
+	<li id="one">Team 1 <input id="team1" type="number" value="0"></li>
+	<li id="two">Team 2 <input id="team2" type="number" value="0"></li>
+	<li>Team 3 <input id="team3" type="number" value="0"></li>
+	<li>Team 4 <input id="team4" type="number" value="0"></li>
+</ol>
+</div>
+<script type="text/javascript" src="football.js"></script>
+</body>
+</html>

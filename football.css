@@ -1,0 +1,12 @@
+body {
+	background: lightgray; 
+}
+
+input {
+	width: 70px;
+	text-align: center;
+}
+
+h2 {
+	margin-left: 110px;
+}
