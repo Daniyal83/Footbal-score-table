@@ -1,12 +1,62 @@
 body {
-	background: lightgray; 
-}
-
-input {
-	width: 70px;
-	text-align: center;
+	background: url(stadium.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	width: 100%;
+	font-family: 'Helvetica', sans-serif;
 }
 
 h2 {
-	margin-left: 110px;
+	color: #d7e231;
+}
+
+li {
+	color: #b4b5aa;
+}
+
+select {
+	width: 100px;
+}
+
+input {
+	width: 30px;
+	text-align: center;
+}
+
+button {
+	margin-top: 10px;
+}
+
+ol {
+	text-align: left;
+}
+
+ol input {
+	margin-left: 20px;
+
+}
+
+i {
+	background-color: #b4b5aa;
+}
+
+ol input::-webkit-outer-spin-button,
+ol input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#team10 {
+	margin-left: 11px;
+}
+
+#teams {
+	border: 1px solid darkgrey;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+	text-align: center;
+	width: 40%;
+
 }
