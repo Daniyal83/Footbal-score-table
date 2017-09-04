@@ -3,12 +3,29 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
+	background-position: top;
+	background-size: cover;
 	width: 100%;
 	font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+	background: -webkit-linear-gradient(left, #232a56, #cbd183); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #232a56, #cbd183); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #232a56, #cbd183); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #232a56, #cbd183); /* Standard syntax */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+	color: #baefb1;
+	padding-left: 20px;
+	border-radius: 15px;
+
 }
 
 h2 {
 	color: #d7e231;
+	margin-top: 5px;
 }
 
 li {
@@ -38,7 +55,7 @@ ol input {
 }
 
 i {
-	background-color: #b4b5aa;
+	color: #e2664d;
 }
 
 ol input::-webkit-outer-spin-button,
@@ -52,11 +69,10 @@ ol input::-webkit-inner-spin-button {
 }
 
 #teams {
-	border: 1px solid darkgrey;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 0 auto;
+	padding: 2px;
+	margin: 5px auto;
 	text-align: center;
 	width: 40%;
+	box-shadow: 0 0 20px rgba(206, 206, 202, 0.5);
 
 }
