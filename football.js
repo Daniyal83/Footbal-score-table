@@ -4,7 +4,7 @@ var inputs = $("li input");
 
 function gameScore() {
 	    var button = document.querySelector("button");
-	    
+	    var message = document.getElementById("message");
 	    button.addEventListener("click", function() {
         var firstScore = parseInt(document.getElementById("first").value);
         var secondScore = parseInt(document.getElementById("second").value);
@@ -14,17 +14,33 @@ function gameScore() {
         } else {
 
         if(firstScore > secondScore) {
-        	alert($("#sel1 option:selected").text()+" won!");
+        	
+            var timerId = setInterval(function() {
+              message.textContent = $("#sel1 option:selected").text()+" won!";
+            }, 100);
+            setTimeout(function() {
+            clearInterval(timerId);
+            message.textContent = "Game";
+            }, 3000);
             
             for(var i = 0; i < inputs.length; i++) {
         if($("#sel1 option:selected").text() === teams[i]) {
         inputs[i].value = parseInt(parseInt(inputs[i].value) + 3);
         
              }
-        }   	
+        }
+
+        	
                             
         } else if(firstScore < secondScore) {
-        	alert($("#sel2 option:selected").text()+" won!");
+
+        	var timerId = setInterval(function() {
+              message.textContent = $("#sel2 option:selected").text()+" won!";
+            }, 100);
+              setTimeout(function() {
+              clearInterval(timerId);
+              message.textContent = "Game";
+            }, 3000);
 
             for(var i = 0; i < inputs.length; i++) {
         if($("#sel2 option:selected").text() === teams[i]) {
@@ -32,9 +48,16 @@ function gameScore() {
         
              }
         }
-        	                      
+        	                
+            
         } else {
-        	alert("Draw!");
+        	var timerId = setInterval(function() {
+              message.textContent = "Draw!";
+            }, 100);
+            setTimeout(function() {
+            clearInterval(timerId);
+            message.textContent = "Game";
+            }, 3000);
         	
             for(var i = 0; i < inputs.length; i++) {
         if($("#sel1 option:selected").text() === teams[i]) {
@@ -45,14 +68,25 @@ function gameScore() {
         if($("#sel2 option:selected").text() === teams[j]) {
                    inputs[j].value = parseInt(parseInt(inputs[j].value) + 1);
             }
-        }            
-    }	        	
- }
+        }
+    }	
+ }      
+    sort();
+        
+    });   
 
-        let a = [], b;
-        [].forEach.call(document.querySelectorAll("ol > li"), (c)=>a.push([c.children[0].value,c]));
-        b = a.sort((a,b)=>b[0]-a[0]);
-        b.forEach((c)=>c[1].parentNode.appendChild(c[1]));
-   });   
 }
 gameScore();
+
+let ol = document.querySelector('ol');
+let lists = [...document.querySelectorAll('li')];
+function sort() {
+    for (let list of lists) {
+    list.remove();
+  }
+
+  lists
+    .map(list => [list, list.querySelector('input')])
+    .sort((a, b) => b[1].value - a[1].value)
+    .forEach(pair => ol.appendChild(pair[0]));
+};
